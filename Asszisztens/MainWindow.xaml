@@ -1,0 +1,60 @@
+﻿<Window x:Class="Asszisztens.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Asszisztens"
+        mc:Ignorable="d"
+        Title="Asszisztens" Height="420" Width="600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+
+    <Border Padding="10">
+        <StackPanel>
+            <StackPanel Margin="0 0 0 30">
+                <TextBlock Text="Adatok" FontWeight="Bold" Margin="0 10 0 0"/>
+                
+                <!-- Név -->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="0" Margin="0 0 10 0">
+                        <TextBlock Text="Vezetéknév" Margin="0 10 0 0"/>
+                        <TextBox x:Name="lastName" Padding="2"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="1" Margin="0 0 0 0">
+                        <TextBlock Text="Keresztnév"  Margin="0 10 0 0"/>
+                        <TextBox x:Name="firstName" Padding="2"/>
+                    </StackPanel>
+
+                </Grid>
+
+                <!-- Lakcím -->
+                <TextBlock Text="Lakcím" Margin="0 10 0 0"/>
+                <TextBox x:Name="address" Padding="2"/>
+
+                <!-- Tajszám -->
+                <TextBlock Text="Tajszám" Margin="0 10 0 0"/>
+                <TextBox x:Name="taj" Padding="2"/>
+
+                <!-- Panasz -->
+                <TextBlock Text="Panasz" Margin="0 10 0 0"/>
+                <TextBox x:Name="patientComplaints" Padding="2" Height="100"/>
+
+            </StackPanel>
+            <!-- Gombok -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button x:Name="betegBtn" Click="betegBtn_Click" Margin="0 0 10 0" Grid.Column="0" Content="Beteg felvétel"/>
+                
+            </Grid>
+        </StackPanel>
+
+    </Border>
+</Window>

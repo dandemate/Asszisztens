@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Asszisztens.Models
+{
+    class Person
+    {
+        public string Nev { get; set; }
+        public string Lakcim { get; set; }
+        public string Tajszam { get; set; }
+        public string Panasz { get; set; }
+        public DateTime Idopont { get; set; }
+
+    }
+}
